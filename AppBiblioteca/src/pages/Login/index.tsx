@@ -3,7 +3,8 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  ImageBackground
 } from 'react-native';
 import { styles } from './style';
 import AxiosInstance from '../../api/AxiosInstance';
@@ -73,12 +74,14 @@ const Login = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Bem-vindo</Text>
-      <TextInput style={styles.input} placeholder='E-mail' onChangeText={setEmail} value={email} />
-      <TextInput style={styles.input} placeholder='Senha' secureTextEntry={true} onChangeText={setSenha} value={senha} />
-      <TouchableOpacity style={styles.botao} onPress={() => handlelogin()}>
-        <Text style={styles.textoBotao}>Login</Text>
-      </TouchableOpacity>
+      <ImageBackground source={require('../../assets/image-background-login.jpg')} style={styles.imageBackground}>
+        <Text style={styles.titulo}>Bem-vindo</Text>
+        <TextInput style={styles.input} placeholder='E-mail' onChangeText={setEmail} value={email} />
+        <TextInput style={styles.input} placeholder='Senha' secureTextEntry={true} onChangeText={setSenha} value={senha} />
+        <TouchableOpacity style={styles.botao} onPress={() => handlelogin()}>
+          <Text style={styles.textoBotao}>Login</Text>
+        </TouchableOpacity>
+      </ImageBackground>
     </View>
   );
 };

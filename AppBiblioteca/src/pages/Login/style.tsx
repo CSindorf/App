@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#7054b6',
+    backgroundColor: '#2a8ba1',
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -20,7 +20,8 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
     paddingHorizontal: 15,
     paddingVertical: 13,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    backgroundColor: '#cfe3e784'
   },
   botao: {
     backgroundColor: '#190152',
@@ -34,5 +35,12 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 18
-  }
+  },
+  imageBackground: {
+    resizeMode: "repeat",
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
 });
